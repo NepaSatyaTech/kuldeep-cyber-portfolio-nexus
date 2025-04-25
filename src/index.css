@@ -1,68 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Code+Pro:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222 47% 11%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 222 47% 11%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 222 47% 11%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 210 40% 98%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -70,7 +25,7 @@
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 268 95% 64%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -79,6 +34,9 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+
+    --radius: 0.5rem;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -96,6 +54,74 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-cyber-darker text-foreground font-sans;
+    background-image: radial-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-cyber-blue relative;
+  }
+  
+  .section-heading::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-16 h-1 bg-cyber-blue mt-2;
+  }
+  
+  .cyber-card {
+    @apply bg-cyber-dark bg-opacity-90 border border-cyber-blue/30 rounded-lg shadow-lg p-6 backdrop-blur-sm transition-all duration-300;
+  }
+  
+  .cyber-card:hover {
+    @apply shadow-cyber-blue/20 border-cyber-blue/50;
+  }
+  
+  .cyber-btn {
+    @apply px-6 py-3 bg-transparent border border-cyber-blue text-cyber-blue rounded font-mono hover:bg-cyber-blue/10 transition-all duration-300 inline-flex items-center space-x-2;
+  }
+  
+  .cyber-btn-filled {
+    @apply px-6 py-3 bg-cyber-blue text-black border border-cyber-blue rounded font-mono hover:bg-cyber-blue/90 transition-all duration-300 inline-flex items-center space-x-2;
+  }
+  
+  .nav-link {
+    @apply relative text-gray-300 hover:text-cyber-blue transition-all duration-300;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-0 h-0.5 bg-cyber-blue transition-all duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 5px rgba(14, 165, 233, 0.7);
+  }
+  
+  .matrix-bg {
+    @apply fixed top-0 left-0 w-full h-full pointer-events-none z-0 opacity-10;
+  }
+  
+  .number-row {
+    @apply flex items-center whitespace-nowrap;
+    animation: scroll-left 20s linear infinite;
+  }
+  
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  .skill-bar {
+    @apply h-2 bg-cyber-blue/30 rounded-full overflow-hidden;
+  }
+  
+  .skill-progress {
+    @apply h-full bg-cyber-blue rounded-full;
   }
 }
