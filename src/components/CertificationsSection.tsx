@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Award, FileImage, Star } from 'lucide-react';
 
@@ -8,28 +7,37 @@ const CertificationsSection = () => {
       id: 1,
       name: "Ethical Hacking+",
       issuer: "CyberForge Academy",
-      date: "August 2023",
-      description: "Comprehensive course covering ethical hacking methodologies, penetration testing techniques, and security assessments.",
+      date: "July 2024",
+      description: "45 Days (60 Hrs) comprehensive course covering ethical hacking methodologies, penetration testing techniques, and security assessments.",
       credentialId: "EH-25478",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
+      image: "/lovable-uploads/ea014b89-9858-4264-b7f5-88d9baaa6e11.png"
     },
     {
       id: 2,
-      name: "Introduction to Hardware and Operating System",
+      name: "Programming in C++: A Hands-on Introduction",
       issuer: "Coursera",
-      date: "March 2023",
-      description: "Fundamental concepts of computer hardware components and operating system principles.",
-      credentialId: "IHOS-982764",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
+      date: "November 2023",
+      description: "In-depth C++ programming course covering object-oriented programming, data structures, and algorithm implementation.",
+      credentialId: "CPP-875634",
+      image: "/lovable-uploads/88737039-c3a5-4660-9947-72d6b0097218.png"
     },
     {
       id: 3,
-      name: "Programming in C++: A Hands-on Introduction",
-      issuer: "Coursera",
-      date: "January 2023",
-      description: "In-depth C++ programming course covering object-oriented programming, data structures, and algorithm implementation.",
-      credentialId: "CPP-875634",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
+      name: "The Bits and Bytes of Computer Networking",
+      issuer: "Google via Coursera",
+      date: "November 2023",
+      description: "Comprehensive networking course covering fundamental concepts of computer networks and protocols.",
+      credentialId: "NET-982764",
+      image: "/lovable-uploads/283b6b2e-b1ff-4ea3-aff6-e1eaf2d4f6c3.png"
+    },
+    {
+      id: 4,
+      name: "Introduction to Cybersecurity Essentials",
+      issuer: "IBM via Coursera",
+      date: "April 2024",
+      description: "Essential cybersecurity concepts, threats, and defense mechanisms in modern digital environments.",
+      credentialId: "CYBER-875634",
+      image: "/lovable-uploads/ca79afee-db6a-4e1f-814a-722f1b1c4392.png"
     }
   ];
 

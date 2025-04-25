@@ -54,7 +54,7 @@ const HeroSection = () => {
             <div className="w-48 h-48 md:w-72 md:h-72 rounded-full border-4 border-cyber-blue p-2 animate-pulse-glow">
               <div className="w-full h-full rounded-full overflow-hidden relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b"
+                  src="/lovable-uploads/2fdc744e-eccd-48d1-ab58-bc7056b9593d.png"
                   alt="Kuldeep Pathak" 
                   className="w-full h-full object-cover"
                 />
