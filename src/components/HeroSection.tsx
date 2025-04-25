@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Shield, ArrowDown } from 'lucide-react';
+import { Shield, ArrowDown, BookOpen, Mail } from 'lucide-react';
 
 const HeroSection = () => {
   const scrollToAbout = (e: React.MouseEvent) => {

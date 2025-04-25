@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Database, Code, Shield, Terminal, Server, Laptop } from 'lucide-react';
+import { Database, Code, Shield, Terminal, Server, Laptop, User, Briefcase } from 'lucide-react';
 
 const SkillsSection = () => {
   const technicalSkills = [

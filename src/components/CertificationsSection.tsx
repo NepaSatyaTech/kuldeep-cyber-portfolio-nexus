@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Award, FileImage } from 'lucide-react';
+import { Award, FileImage, Star } from 'lucide-react';
 
 const CertificationsSection = () => {
   const certifications = [
